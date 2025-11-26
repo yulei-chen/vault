@@ -1,0 +1,45 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bujo2025]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>Bujo2025</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 26 Nov 2025 00:43:37 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 26 Nov 2025 00:43:37 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[01. Introduction]]></title><description><![CDATA[just a test]]></description><link>lecture-notes/model-driven-software-development/01.-introduction.html</link><guid isPermaLink="false">Lecture Notes/Model-Driven Software Development/01. Introduction.md</guid><pubDate>Wed, 26 Nov 2025 00:40:06 GMT</pubDate></item><item><title><![CDATA[01. Introduction]]></title><description><![CDATA[NLP: Algorithms to process, analyze and understand texts in natural language
+Understanding structure
+Understanding meaning Ambiguity, e.g., bank
+Compositionality, e.g., green thumb
+Co-reference, e.g., if the baby does not like the milk, boil it
+Living language, e.g., Eyjafjallajökull
+Rare events
+<img alt="Pasted image 20251126012405.png" src="lecture-notes/natural-language-processing/attachments/pasted-image-20251126012405.png" target="_self">Corpus = large collection of annotated texts (or speech files)
+Linguistics
+Machine learning
+NLP tasks: Information Extraction + Retrieval
+Summarization
+Machine translation
+Question Answering
+Personal assistant NLP techniques (focus on deep learning-based): Data types Texts, e.g., Brown Corpus, Penn Treebank
+Dictionaries/Ontologies, e.g., WordNet, GermaNet, EuroWordNet Data grows English Text Corpora (News)
+Computer MT or ASR systems train on &gt;&gt; 1GWords. News Shuffle, GigaWord, Europarl, VideoLectures, …
+Human speaks 0.5 GigaWords in a Lifetime! Model types Classification, e.g., word sense disambiguation
+Sequence Classification, e.g., sentiment analysis
+Sequence labeling, e.g., named entity recognition
+Sequence to Sequence model, e.g., summerization
+Structure prediction, e.g., parsing Evaluation: Human evaluation
+Automatic evaluation ]]></description><link>lecture-notes/natural-language-processing/01.-introduction.html</link><guid isPermaLink="false">Lecture Notes/Natural Language Processing/01. Introduction.md</guid><pubDate>Wed, 26 Nov 2025 00:39:25 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Pasted image 20251126012405]]></title><description><![CDATA[<img src="lecture-notes/natural-language-processing/attachments/pasted-image-20251126012405.png" target="_self">]]></description><link>lecture-notes/natural-language-processing/attachments/pasted-image-20251126012405.html</link><guid isPermaLink="false">Lecture Notes/Natural Language Processing/attachments/Pasted image 20251126012405.png</guid><pubDate>Wed, 26 Nov 2025 00:24:05 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[01. Introduction]]></title><description><![CDATA[NPL: Algorithms to process, analyze and understand texts in natural language
+Understanding structure
+Understanding meaning Ambiguity, e.g., bank
+Compositionality, e.g., green thumb
+Co-reference, e.g., if the baby does not like the milk, boil it
+Living language, e.g., Eyjafjallajökull
+Rare events
+<img alt="Pasted image 20251126012405.png" src="attachments/pasted-image-20251126012405.png" target="_self">Corpus = large collection of annotated texts (or speech files)
+Linguistics
+Machine learning
+NLP tasks: Information Extraction + Retrieval
+Summarization
+Machine translation
+Question Answering
+Personal assistant NLP techniques (focus on deep learning-based): Data types Texts, e.g., Brown Corpus, Penn Treebank
+Dictionaries/Ontologies, e.g., WordNet, GermaNet, EuroWordNet Data grows English Text Corpora (News)
+Computer MT or ASR systems train on &gt;&gt; 1GWords. News Shuffle, GigaWord, Europarl, VideoLectures, …
+Human speaks 0.5 GigaWords in a Lifetime! Model types Classification, e.g., word sense disambiguation
+Sequence Classification, e.g., sentiment analysis
+Sequence labeling, e.g., named entity recognition
+Sequence to Sequence model, e.g., summerization
+Structure prediction, e.g., parsing Evaluation: Human evaluation
+Automatic evaluation ]]></description><link>01.-introduction.html</link><guid isPermaLink="false">Lecture Notes/NLP/01. Introduction.md</guid><pubDate>Wed, 26 Nov 2025 00:32:47 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Pasted image 20251126012405]]></title><description><![CDATA[<img src="attachments/pasted-image-20251126012405.png" target="_self">]]></description><link>attachments/pasted-image-20251126012405.html</link><guid isPermaLink="false">Lecture Notes/NLP/attachments/Pasted image 20251126012405.png</guid><pubDate>Wed, 26 Nov 2025 00:24:05 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
