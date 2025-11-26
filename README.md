@@ -1,204 +1,69 @@
-## Morphology
+## Word Classes
 
-### Morphology and Languages
+Part-of-Speech (POS): POS tags classify words based on their grammatical relationship and functional category (e.g., noun, verb) in context. This differs from word sense (meaning).
 
-#### 1. Isolating Languages
+- Classification: Words belong to Open classes (lexical words) (Nouns, Verbs, Adjectives, etc.) or Closed classes (functional) (Determiners, Pronouns, Conjunctions).
+- Universal Tag Set: Smaller, coarser sets (like the 12-tag Universal Tag Set) are used for cross-lingual purposes.
+- Challenge (Ambiguity): Many word instances are ambiguous, meaning the same word type can have multiple POS tags (e.g., "back" can be JJ, NN, RB, or VB). POS tagging is the process of determining the correct tag for a word given its context.
 
-Example (Chinese): 我看书 — “I read/look at a book.”. Morphemes:
+## Syntax
 
-- 我 = I
-- 看 = read/look
-- 书 = book
+Syntax studies how words organize into hierarchical units called constituents (phrases). Only entire phrases, such as a Prepositional Phrase (PP), can be moved within a sentence.
 
-Key idea: Minimal or no inflection; morphemes usually stand alone.
+- Context Free Grammar: Introduced by Chomsky, CFG is a formal system G=(V, \Sigma, R, S) used to generate sentences and assign parse trees. Non-terminals (V) are phrase variables (NP, VP), and Terminals (\Sigma) are the actual words.
+- Phrase Structure Grammar: This applies CFG rules to define natural language structures (e.g., Declarative sentences are NP VP).
+  - Subcategorization: Verbs enforce constraints on the required accompanying phrases; e.g., Transitive verbs require a direct object, while Intransitive verbs do not.
+  - Ambiguity: A sentence can have multiple correct parse trees (Structural Ambiguity). This includes Attachment ambiguity (e.g., where a prepositional phrase attaches) and Coordination ambiguity.
+- Lexicalized Grammars (e.g., Combinatory Categorial Grammar): These models use a lexicon to encode complex grammatical dependencies like Agreement, Subcategorization, and Long-distance dependencies. Words are assigned detailed categories (e.g., the verb "Cancel" has the category (S\NP)/NP).
+  - Forward rule application (X/Y Y -> X)
+  - Backward rule application (Y X\Y -> X)
+  - ![](https://bdefzwcumgzjwllsnaej.supabase.co/storage/v1/object/public/minilink-user-assets/019abcee-34f9-7ee7-9b82-8ee91aee1098)
+- Dependency Grammar: This approach describes structure using directed binary relations (typed relations) between a head and its dependent. This is particularly advantageous for languages with free word order or rich morphology, and it provides a direct connection to semantics.
+  - Graph G(V,A)
+    - V: Vertices correspond to words
+    - A: arcs corresponding to relations
+  - Restrictions:
+    - Connected
+    - Designated root node
+    - Acyclic (connected acyclic graph is tree) or planar
+  - ![](https://bdefzwcumgzjwllsnaej.supabase.co/storage/v1/object/public/minilink-user-assets/019abcee-34f9-7ee7-9b82-94967db06d1a)
 
-#### 2. Agglutinative Languages
+## Language Model
 
-Example (Turkish): ev-ler-in-de — “in your houses”. Morphemes:
+Language Models automatically learn sentence structure by assigning a Probability to a sentence, representing how likely it is to be produced by a native speaker.
 
-- ev = house
-- -ler = plural
-- -in = your
-- -de = in
+---
 
-Key idea: Morphemes have clear boundaries and single meanings, attached in sequence.
+### Challenge
 
-#### 3. Fusional (Inflectional) Languages
+Simple counting fails due to sparse data; many valid but unseen sentences are assigned a probability of zero.
 
-Example (Spanish): habl-o — “I speak”. Morphemes:
+Solution: Chain Rule. To overcome this, the sentence probability is broken down into a product of conditional probabilities for individual words.
 
-- habl- = speak
-- -o = 1st person + singular + present
+\<div data-type="math" data-tex="P(w_1w_2...w_n) = \prod\_{i=1}^n P(w_i | w_1...w\_{i-1})">\<span class="katex-display">\<span class="katex">\<span class="katex-mathml">\<math xmlns="http\://www\.w3.org/1998/Math/MathML" display="block">\<semantics>\<mrow>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<msub>\<mi>w\</mi>\<mn>1\</mn>\</msub>\<msub>\<mi>w\</mi>\<mn>2\</mn>\</msub>\<mi mathvariant="normal">.\</mi>\<mi mathvariant="normal">.\</mi>\<mi mathvariant="normal">.\</mi>\<msub>\<mi>w\</mi>\<mi>n\</mi>\</msub>\<mo stretchy="false">)\</mo>\<mo>=\</mo>\<munderover>\<mo>∏\</mo>\<mrow>\<mi>i\</mi>\<mo>=\</mo>\<mn>1\</mn>\</mrow>\<mi>n\</mi>\</munderover>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<msub>\<mi>w\</mi>\<mi>i\</mi>\</msub>\<mi mathvariant="normal">∣\</mi>\<msub>\<mi>w\</mi>\<mn>1\</mn>\</msub>\<mi mathvariant="normal">.\</mi>\<mi mathvariant="normal">.\</mi>\<mi mathvariant="normal">.\</mi>\<msub>\<mi>w\</mi>\<mrow>\<mi>i\</mi>\<mo>−\</mo>\<mn>1\</mn>\</mrow>\</msub>\<mo stretchy="false">)\</mo>\</mrow>\<annotation encoding="application/x-tex">P(w_1w_2...w_n) = \prod\_{i=1}^n P(w_i | w_1...w\_{i-1})\</annotation>\</semantics>\</math>\</span>\<span class="katex-html" aria-hidden="true">\<span class="base">\<span class="strut" style="height:1em;vertical-align:-0.25em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="msupsub">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:0.3011em;">\<span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mtight">1\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:0.15em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="msupsub">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:0.3011em;">\<span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mtight">2\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:0.15em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="mord">...\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="msupsub">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:0.1514em;">\<span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mathnormal mtight">n\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:0.15em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="mclose">)\</span>\<span class="mspace" style="margin-right:0.2778em;">\</span>\<span class="mrel">=\</span>\<span class="mspace" style="margin-right:0.2778em;">\</span>\</span>\<span class="base">\<span class="strut" style="height:2.9291em;vertical-align:-1.2777em;">\</span>\<span class="mop op-limits">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:1.6514em;">\<span style="top:-1.8723em;margin-left:0em;">\<span class="pstrut" style="height:3.05em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mtight">\<span class="mord mathnormal mtight">i\</span>\<span class="mrel mtight">=\</span>\<span class="mord mtight">1\</span>\</span>\</span>\</span>\<span style="top:-3.05em;">\<span class="pstrut" style="height:3.05em;">\</span>\<span>\<span class="mop op-symbol large-op">∏\</span>\</span>\</span>\<span style="top:-4.3em;margin-left:0em;">\<span class="pstrut" style="height:3.05em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mathnormal mtight">n\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:1.2777em;">\<span>\</span>\</span>\</span>\</span>\</span>\<span class="mspace" style="margin-right:0.1667em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="msupsub">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:0.3117em;">\<span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mathnormal mtight">i\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:0.15em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="mord">∣\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="msupsub">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:0.3011em;">\<span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mtight">1\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:0.15em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="mord">...\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="msupsub">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:0.3117em;">\<span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mtight">\<span class="mord mathnormal mtight">i\</span>\<span class="mbin mtight">−\</span>\<span class="mord mtight">1\</span>\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:0.2083em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="mclose">)\</span>\</span>\</span>\</span>\</span>\</div>
 
-Key idea: A single morpheme typically encodes multiple grammatical features.
+E.g.,
 
-#### 4. Polysynthetic Languages
+\<div data-type="math" data-tex="\begin{align} P(“its\&amp; \ water \ is \ so \ transparent”) \\\ = \ P(its) \&amp;× P(water|its) \\\ \&amp;× P(is|its \ water) \\\ \&amp;× P(so|its \ water \ is) \\\ \&amp;× P(transparent|its \ water \ is \ so) \end{align}">\<span class="katex-display">\<span class="katex">\<span class="katex-mathml">\<math xmlns="http\://www\.w3.org/1998/Math/MathML" display="block">\<semantics>\<mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em">\<mtr>\<mtd class ="mtr-glue">\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<mtext>“\</mtext>\<mi>i\</mi>\<mi>t\</mi>\<mi>s\</mi>\</mrow>\</mstyle>\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mrow>\</mrow>\<mtext> \</mtext>\<mi>w\</mi>\<mi>a\</mi>\<mi>t\</mi>\<mi>e\</mi>\<mi>r\</mi>\<mtext> \</mtext>\<mi>i\</mi>\<mi>s\</mi>\<mtext> \</mtext>\<mi>s\</mi>\<mi>o\</mi>\<mtext> \</mtext>\<mi>t\</mi>\<mi>r\</mi>\<mi>a\</mi>\<mi>n\</mi>\<mi>s\</mi>\<mi>p\</mi>\<mi>a\</mi>\<mi>r\</mi>\<mi>e\</mi>\<mi>n\</mi>\<mi>t\</mi>\<mtext>”\</mtext>\<mo stretchy="false">)\</mo>\</mrow>\</mstyle>\</mtd>\<mtd class ="mtr-glue">\</mtd>\<mtd class ="mml-eqn-num">\</mtd>\</mtr>\<mtr>\<mtd class ="mtr-glue">\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mo>=\</mo>\<mtext> \</mtext>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<mi>i\</mi>\<mi>t\</mi>\<mi>s\</mi>\<mo stretchy="false">)\</mo>\</mrow>\</mstyle>\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mrow>\</mrow>\<mo>×\</mo>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<mi>w\</mi>\<mi>a\</mi>\<mi>t\</mi>\<mi>e\</mi>\<mi>r\</mi>\<mi mathvariant="normal">∣\</mi>\<mi>i\</mi>\<mi>t\</mi>\<mi>s\</mi>\<mo stretchy="false">)\</mo>\</mrow>\</mstyle>\</mtd>\<mtd class ="mtr-glue">\</mtd>\<mtd class ="mml-eqn-num">\</mtd>\</mtr>\<mtr>\<mtd class ="mtr-glue">\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\</mrow>\</mstyle>\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mrow>\</mrow>\<mo>×\</mo>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<mi>i\</mi>\<mi>s\</mi>\<mi mathvariant="normal">∣\</mi>\<mi>i\</mi>\<mi>t\</mi>\<mi>s\</mi>\<mtext> \</mtext>\<mi>w\</mi>\<mi>a\</mi>\<mi>t\</mi>\<mi>e\</mi>\<mi>r\</mi>\<mo stretchy="false">)\</mo>\</mrow>\</mstyle>\</mtd>\<mtd class ="mtr-glue">\</mtd>\<mtd class ="mml-eqn-num">\</mtd>\</mtr>\<mtr>\<mtd class ="mtr-glue">\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\</mrow>\</mstyle>\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mrow>\</mrow>\<mo>×\</mo>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<mi>s\</mi>\<mi>o\</mi>\<mi mathvariant="normal">∣\</mi>\<mi>i\</mi>\<mi>t\</mi>\<mi>s\</mi>\<mtext> \</mtext>\<mi>w\</mi>\<mi>a\</mi>\<mi>t\</mi>\<mi>e\</mi>\<mi>r\</mi>\<mtext> \</mtext>\<mi>i\</mi>\<mi>s\</mi>\<mo stretchy="false">)\</mo>\</mrow>\</mstyle>\</mtd>\<mtd class ="mtr-glue">\</mtd>\<mtd class ="mml-eqn-num">\</mtd>\</mtr>\<mtr>\<mtd class ="mtr-glue">\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\</mrow>\</mstyle>\</mtd>\<mtd>\<mstyle scriptlevel="0" displaystyle="true">\<mrow>\<mrow>\</mrow>\<mo>×\</mo>\<mi>P\</mi>\<mo stretchy="false">(\</mo>\<mi>t\</mi>\<mi>r\</mi>\<mi>a\</mi>\<mi>n\</mi>\<mi>s\</mi>\<mi>p\</mi>\<mi>a\</mi>\<mi>r\</mi>\<mi>e\</mi>\<mi>n\</mi>\<mi>t\</mi>\<mi mathvariant="normal">∣\</mi>\<mi>i\</mi>\<mi>t\</mi>\<mi>s\</mi>\<mtext> \</mtext>\<mi>w\</mi>\<mi>a\</mi>\<mi>t\</mi>\<mi>e\</mi>\<mi>r\</mi>\<mtext> \</mtext>\<mi>i\</mi>\<mi>s\</mi>\<mtext> \</mtext>\<mi>s\</mi>\<mi>o\</mi>\<mo stretchy="false">)\</mo>\</mrow>\</mstyle>\</mtd>\<mtd class ="mtr-glue">\</mtd>\<mtd class ="mml-eqn-num">\</mtd>\</mtr>\</mtable>\<annotation encoding="application/x-tex">\begin{align} P(“its\&amp; \ water \ is \ so \ transparent”) \\\ = \ P(its) \&amp;× P(water|its) \\\ \&amp;× P(is|its \ water) \\\ \&amp;× P(so|its \ water \ is) \\\ \&amp;× P(transparent|its \ water \ is \ so) \end{align}\</annotation>\</semantics>\</math>\</span>\<span class="katex-html" aria-hidden="true">\<span class="base">\<span class="strut" style="height:7.5em;vertical-align:-3.5em;">\</span>\<span class="mtable">\<span class="col-align-r">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:4em;">\<span style="top:-6.16em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord">“\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal">s\</span>\</span>\</span>\<span style="top:-4.66em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mrel">=\</span>\<span class="mspace"> \</span>\<span class="mspace" style="margin-right:0.2778em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal">s\</span>\<span class="mclose">)\</span>\</span>\</span>\<span style="top:-3.16em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\</span>\</span>\<span style="top:-1.66em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\</span>\</span>\<span style="top:-0.16em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:3.5em;">\<span>\</span>\</span>\</span>\</span>\</span>\<span class="col-align-l">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:4em;">\<span style="top:-6.16em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mord">\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">er\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">s\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal">so\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">r\</span>\<span class="mord mathnormal">an\</span>\<span class="mord mathnormal">s\</span>\<span class="mord mathnormal">p\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">re\</span>\<span class="mord mathnormal">n\</span>\<span class="mord mathnormal">t\</span>\<span class="mord">”\</span>\<span class="mclose">)\</span>\</span>\</span>\<span style="top:-4.66em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mord">\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mbin">×\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">er\</span>\<span class="mord">∣\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal">s\</span>\<span class="mclose">)\</span>\</span>\</span>\<span style="top:-3.16em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mord">\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mbin">×\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">s\</span>\<span class="mord">∣\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal">s\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">er\</span>\<span class="mclose">)\</span>\</span>\</span>\<span style="top:-1.66em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mord">\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mbin">×\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord mathnormal">so\</span>\<span class="mord">∣\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal">s\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">er\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">s\</span>\<span class="mclose">)\</span>\</span>\</span>\<span style="top:-0.16em;">\<span class="pstrut" style="height:3em;">\</span>\<span class="mord">\<span class="mord">\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mbin">×\</span>\<span class="mspace" style="margin-right:0.2222em;">\</span>\<span class="mord mathnormal" style="margin-right:0.13889em;">P\</span>\<span class="mopen">(\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">r\</span>\<span class="mord mathnormal">an\</span>\<span class="mord mathnormal">s\</span>\<span class="mord mathnormal">p\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">re\</span>\<span class="mord mathnormal">n\</span>\<span class="mord mathnormal">t\</span>\<span class="mord">∣\</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal">s\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal" style="margin-right:0.02691em;">w\</span>\<span class="mord mathnormal">a\</span>\<span class="mord mathnormal">t\</span>\<span class="mord mathnormal" style="margin-right:0.02778em;">er\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal">i\</span>\<span class="mord mathnormal">s\</span>\<span class="mspace"> \</span>\<span class="mord mathnormal">so\</span>\<span class="mclose">)\</span>\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:3.5em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\<span class="tag">\<span class="vlist-t vlist-t2">\<span class="vlist-r">\<span class="vlist" style="height:4em;">\<span style="top:-6em;">\<span class="pstrut" style="height:2.84em;">\</span>\<span class="eqn-num">\</span>\</span>\<span style="top:-4.5em;">\<span class="pstrut" style="height:2.84em;">\</span>\<span class="eqn-num">\</span>\</span>\<span style="top:-3em;">\<span class="pstrut" style="height:2.84em;">\</span>\<span class="eqn-num">\</span>\</span>\<span style="top:-1.5em;">\<span class="pstrut" style="height:2.84em;">\</span>\<span class="eqn-num">\</span>\</span>\<span style="top:0em;">\<span class="pstrut" style="height:2.84em;">\</span>\<span class="eqn-num">\</span>\</span>\</span>\<span class="vlist-s">​\</span>\</span>\<span class="vlist-r">\<span class="vlist" style="height:3.5em;">\<span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</div>
 
-Example (Inuktitut): tusaatsiarunnanngittualuujunga — “I really can’t hear well”. Simplified morphemes:
+---
 
-- tusaa- = hear
-- -tsiaq- = well
-- -junnaq- = be able
-- -nngit- = not
-- -tualuu- = very
-- -junga = I
+### Another Challenge
 
-Key idea: Many morphemes combine to express what would be a whole sentence.
+However, this still requires estimating the probability of a word based on its impossibly large full history.
 
-#### 5. Root-and-Pattern Languages
+Solution: Markov Assumption. This simplifying assumption is made to address data sparsity. It dictates that the probability of a word $w\_i$ is approximated by considering only a fixed, limited number ($n-1$) of preceding words, rather than the full history.
 
-Example (Arabic): kitaab — “book”. Morphemes:
+N-gram Models: This assumption forms the basis for N-gram models (Unigram, Bigram, Trigram). Although N-gram models are linguistically insufficient due to their inability to capture true long-distance dependencies, they are often practical.
 
-- k-t-b = root “write”
-- i\_\_a\_\_ = vocalic pattern forming a noun
+![](https://bdefzwcumgzjwllsnaej.supabase.co/storage/v1/object/public/minilink-user-assets/019abcee-34f9-7ee7-9b82-9d58bbbda175)
 
-Key idea: Words are formed by inserting vocalic patterns into consonantal roots.
+---
 
-### Concepts of morphology
+### Maximum Likelihood Estimation (MLE)
 
-- Lexeme, e.g., SEE
-- Word-form, e.g., saw, seeing, saws
-- Paradigm, e.g., I, my, mine, me
-- Word family, e.g., act, action, actor, activate, active, activist
+MLE is the method used to estimate N-gram probabilities by maximizing the probability of the training data.
 
-### Types of morphemes
+![](https://bdefzwcumgzjwllsnaej.supabase.co/storage/v1/object/public/minilink-user-assets/019abcee-34f9-7ee7-9b82-a7ad9236d7df)
 
-#### 1. Stem
-
-- Lexical/Content
-- Functional
-- Root
-
-#### 2. Affixes
-
-- Suffix
-- Prefix
-- Infix
-- Circumfix
-
-### Word Formation
-
-#### 1. Inflection
-
-- Changes the grammatical form of a word without creating a new lexeme.
-- Does not change core meaning or word class.
-- Typical categories: tense, number, case, agreement.
-
-Examples:
-
-- walk → walks (3sg)
-- cat → cats (plural)
-- see → saw (past)
-
-#### 2. Derivation
-
-- Forms a new word (new lexeme) by adding derivational affixes.
-- Often changes meaning and sometimes word class.
-
-Examples:
-
-- happy → unhappy
-- nation → national
-- modern → modernize
-- read → reader
-
-#### 3. Compounding
-
-- Combines two or more roots/words to form a new lexeme.
-- The components remain recognizable.
-
-Examples:
-
-- black + board → blackboard
-- sun + light → sunlight
-- ice + cream → ice-cream
-
-Here’s a concise English note summarizing the morphological processes you listed, with clear examples:
-
-### Morphology Tasks
-
-#### 1. Lemmatization
-
-- Maps a word form to its lemma (dictionary/base form).
-- Ignores context.
-
-Example:
-
-- saw → see
-
-> Lemma and Lexeme are different. Lexeme is an abstract concept, while lemma is a concrete concept.
-
-#### 2. Morphological Analysis
-
-- Breaks a word into (lemma + grammatical tag).
-- Does not consider context, so may produce multiple analyses.
-
-Example:
-
-- saw → {(see, verb.past), (saw, noun.sg)}
-
-#### 3. Tagging (Morphosyntactic Disambiguation)
-
-- Uses context to select the correct analysis.
-
-Example:
-
-- Sentence: Peter saw her
-- saw → {(see, verb.past)}
-
-#### 4. Morpheme Segmentation
-
-- Splits a word into its smallest meaningful units (morphemes).
-
-Example:
-
-- de-nation-al-iz-ation → de + nation + al + iz + ation
-
-#### 5. Generation
-
-- Produces a word form from a lemma + features.
-- Essentially the reverse of lemmatization.
-
-Example:
-
-- (see, verb.past) → saw
-
-## Machine Learning in NLP
-
-Both Feature Engineering (FE) and Representation Learning (RL) are methodologies designed to solve the critical challenge in machine learning models: how to map text into a fixed vector representation, or
-
-\<div data-type="math" data-tex="R^m">\<span class="katex-display">\<span class="katex">\<span class="katex-mathml">\<math xmlns="http\://www\.w3.org/1998/Math/MathML" display="block">\<semantics>\<mrow>\<msup>\<mi>R\</mi>\<mi>m\</mi>\</msup>\</mrow>\<annotation encoding="application/x-tex">R^m\</annotation>\</semantics>\</math>\</span>\<span class="katex-html" aria-hidden="true">\<span class="base">\<span class="strut" style="height:0.7144em;">\</span>\<span class="mord">\<span class="mord mathnormal" style="margin-right:0.00773em;">R\</span>\<span class="msupsub">\<span class="vlist-t">\<span class="vlist-r">\<span class="vlist" style="height:0.7144em;">\<span style="top:-3.113em;margin-right:0.05em;">\<span class="pstrut" style="height:2.7em;">\</span>\<span class="sizing reset-size6 size3 mtight">\<span class="mord mathnormal mtight">m\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</span>\</div>
-
-However, they differ fundamentally in their approach, timeframe, and resulting data structure.
-
-### Feature Engineering vs. Representation Learning
-
-#### 1. Core Philosophy and Timeframe
-
-Feature Engineering (FE) represents the dominant methods used over the last 25 years. This approach relies on manually defined templates to describe the important information of the text. FE is often decried as “costly, hand-crafted, expensive, domain-specific,” among other criticisms. While simple features typically give the bulk of the performance and can yield high accuracies, the feature set is still difficult to maintain.
-
-Representation Learning (RL) describes the methods developed over the last 10 years. The defining characteristic of RL is that the features are automatically learned. The result of this process is an approximation, meaning some information are lost, and the representation is typically task dependent.
-
-#### 2. Representation Format and Structure
-
-The methodologies lead to stark differences in the resulting vector format:
-
-- FE commonly uses representations like the Bag of Words (BoW). This approach results in a Sparse matrix, where most entries are zero. BoW uses one feature per word, which can be a Binary feature (0 or 1) or a Count feature. Feature Importance and TF-IDF can help solve problems respectively about word importance and high-frequently used no-meaning words.
-- RL generates a Neural representation, which is characterized as Dense.
-
-#### 3. Issues of Feature Engineering
-
-- Negation: It's not a great monster movie.
-- Different sense: There's a great deal of corny dialogue and preposterous moments.
-- Multiple sentiments: A great ensemble cast can't lift this heartfelt enterprise out of the familiar.
-- Number of features:
-  - Too few. Hard to distinguish different inputs
-  - Too many. Overfitting
-
-#### 4. Handling Language Challenges
-
-Representation Learning evolved to better handle critical challenges inherent in text data that constrained Feature Engineering:
-
-- Word Order and Length: FE methods like BoW ignore word position when dealing with variable length input. Although FE can use Higher-Order Binary Feature Templates (like bigrams or trigrams) to consider word order and maintain a fixed size vector representation, this introduces the challenge of an extremely large number of features. Conversely, RL must address the fact that word order is important and must handle variable length input.
-- Open Vocabulary: For FE, open vocabulary is a challenge that requires the use of a fixed vocab. RL also faces the open vocabulary challenge, but aims to solve it by being able to understand unknown words, such as the complex term Hippopotomonstrosesquipedaliophobia.
-- Granularity: RL’s approach to solving vocabulary challenges involves identifying the best granularity—choosing among words, subwords, or characters. RL acknowledges that while using characters provides much training data and allows understanding of unknown words, it leads to long sequences for text, which is not efficient. Therefore, RL uses machine learning based subword segmentation to learn efficient representation. Techniques like Byte-Pair Encoding (BPE), which starts with an Initial vocabulary of characters to ensure every words can be represented, are employed to strike this balance.
+A key challenge persists: if an N-gram is an unseen event (count = 0), its probability is 0, which makes the probability of the entire containing sentence 0.
