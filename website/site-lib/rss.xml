@@ -1,4 +1,66 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yulei's Notes]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>Yulei's Notes</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 01 Dec 2025 02:12:37 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 01 Dec 2025 02:12:36 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[01. Introduction]]></title><description><![CDATA[Software frequently fails, often resulting in severe consequences.
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yulei's Notes]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>Yulei's Notes</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 04 Dec 2025 02:57:47 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 04 Dec 2025 02:57:47 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[03. Testing Phrases]]></title><description><![CDATA[A software development lifecycle model describes the types of activities for each phase in a software project and how they are related chronologically and logically. Models fall into two main categories: Sequential development models and Iterative-Incremental development models.<img alt="Pasted image 20251204035604.png" src="attachments/pasted-image-20251204035604.png" target="_self">The V-Model connects development phases on the left branch (Construction Phases) with testing phases on the right branch (Test Phases).Key Points:
+The steps on the right branch represent test execution.
+Associated test preparation (planning, specification) starts earlier and runs parallel to the development steps.
+The rule of thumb is that finding failures on the same level of abstraction on which they are created is easiest.
+<br><img alt="Pasted image 20251204035633.png" src="attachments/pasted-image-20251204035633.png" target="_self">Development takes place in small steps; the system is created through a planned series of versions and intermediate deliveries (increments).
+Incremental: Goals are specified from the beginning, and finished parts are assumed not to be changed anymore.
+Iterative: The system emerges over time; each iteration (cycle) typically specifies, designs, implements, and tests a group of features, delivering a working software. Iterations can include changes to finished features.
+Testing in IIDMs: Construction phases and test phases interleave. Continuous integration tests and regression tests are necessary. Verification and validation are possible for each increment. Phase: The first testing phase.
+Test Object: Implemented software units (modules, classes) tested in isolation to exclude external influences, allowing failures to be clearly traced.
+Goals: Check if the component fulfills its specified functionality (input/output behavior). Other criteria include Robustness (capability to catch failure situations and keep working), Efficiency (economic resource usage, reaction times), and Maintainability (code structure, documentation).
+Strategy and Responsibility: Often performed by developers (developer test). Since source code is known, testing is often done as white-box test.
+Environment: Requires a Driver (calls services of the test object) and Placeholder (Dummy/Stub) (simulates services imported by the test object). Phase: The second testing phase, performed after unit testing. Components must be tested and failures fixed beforehand.
+Goal: To test if communication between components works. The primary goal is to find faults in interfaces and interaction between integrated components.
+Fault Types: Interface incompatibility, missing data, contradictory interpretation of specification, and timing problems (data communicated too late or at the wrong time).
+Test Basis: Software design, System design, Sequence Diagrams, and specification of interfaces and communication protocols.
+Test Environment: Needs a Driver and Monitors to observe the interfaces and data traffic. Phase: The third test phase, performed after everything is integrated.
+Test Object: The completely integrated system.
+Goal: Test the system as a whole from the customer’s point of view to determine if it meets the specified system requirements. This involves Verification (system behavior meets design) and Validation (system is complete and works as expected).
+Test Basis: System and Software requirements specification, Use cases, and User stories.
+Test Environment: Should be very close to the real production environment, using real hardware and software products (instead of drivers and dummies).
+Problems: Vague customer specifications, or missing decisions regarding specified requirements. Phase: The final test phase; it focuses on the view and opinion of the customer.
+Focus: The focus is on gaining trust in the product, not failure finding. It is typically performed at the customer’s location.
+The Agile Manifesto values working software, customer collaboration, and responding to change.
+Testing is embedded into the single sprints.
+The team should choose suitable techniques, and test automation (CI/CD tool chains) should be introduced.
+Manual testing should be viewed as exploratory testing (rapid cycle through test planning, without fixed test specifications).
+Test automation is very important in all testing phases.
+Continuous Integration (CI): Integrate and test changes frequently (after no more than a couple of hours).
+Test First Programming (Test-Driven-Development): Writing a failing automated test before changing any code, then improving the code until all tests pass.
+Pair Programming: Writing all production code with two people at one machine.
+Incremental Design: Investing in the design of the system every day. Definition of Ready (DoR): A checklist used to create user stories and quality assurance. A story is ready only if test cases can be formulated and the expected results are clear.
+Definition of Done (DoD): A checklist defining the goals for achieving a story. It specifies the testing goals, necessary testing techniques, test coverage, and test end criteria, ensuring product quality and customer satisfaction.
+]]></description><link>software-test-&amp;-quality-management/03.-testing-phrases.html</link><guid isPermaLink="false">Software Test &amp; Quality Management/03. Testing Phrases.md</guid><pubDate>Thu, 04 Dec 2025 02:57:34 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[02. Testing Process]]></title><description><![CDATA[The General Testing Process is tightly interconnected with software development but remains an independent process. This process must be properly adapted for every testing phase. Every phase requires a specific testing schedule, and testing must be split into small tasks or activities.Contextual Factors Affecting the Process:
+Used software development model.
+Possible testing level and test types.
+Product and project risks.
+Business domain.
+Company restrictions (budget, resources, deadlines, contractual and regulatory requirements).
+Guidelines and practices of the company, and stipulated internal and external standards.
+The Activities (Cyclical Flow):The process involves Test Planning, Test Analysis, Test Design, Test Implementation, Test Execution, Test Completion, and continuous Test Monitoring and Control. Some activities are executed in parallel.<img alt="Screenshot 2025-12-01 at 03.45.29.png" src="attachments/screenshot-2025-12-01-at-03.45.29.png" target="_self">Traceability:Traceability is the degree to which a relationship can be established between two or more work products (ISO 19506).
+Vertical traceability: Tracing requirements through layers of development documentation to components.
+Horizontal traceability: Tracing requirements for a test level through the layers of test documentation (e.g., test plan, test design specification, test procedure specification).
+Traceability supports evaluation of test coverage, impact analysis of requirements, increase comprehensibility of reports, and IT-Governance-criteria.Testing in an automotive/Cyber-Physical Systems (CPS) context is complex because software runs on distributed Electronic Control Units (ECUs). Testing must cover both software and hardware, necessitating new steps to check integration of software onto hardware, hardware with hardware, etc.. This is often realized using “in-the-loop” processes.Test cases can be categorized based on their intended goal:
+Positive-Test: Checks for the specified and delivered results and reactions.
+Negative-Test: Checks expected false inputs and exceptional behavior. (It can be challenging to create certain effects, like network overload, to test this behavior).
+Robustness-Test: Checks unexpected test cases that are not exception handled (catastrophical). Abstract (Logical) Test Cases: Test cases defined without concrete values for input data and expected results. They are helpful to document the scope and can be used with different concrete data.
+Concrete Test Cases: Use specific, defined input values and corresponding expected results.
+Test cases in general should only consist of a small number of steps.After executing a test case, it must be decided whether a failure was found by comparing the actual result to the expected result (desired result).
+Requirement: The expected result must be specified for every test case beforehand.
+Test Oracles: These are the sources that must be consulted to gather this information and deliver the desired results. Expected results are derived from the specification.
+Possibilities for Deriving Expected Values:
+Tester Derivation: The tester derives the expected value from the input value based on the specification (most common practice).
+Executable Prototype: If a formal specification is available, an executable prototype can be generated, and its results can be used as the expected results for the real Software Under Test (SUT).
+Back-to-back Testing: The SUT is independently implemented by several developer groups and all versions are tested against each other with the same input values. If results differ, at least one version has a failure.
+Other Oracles: User manuals, (tested) predecessor versions, or programs with similar functions.
+System Itself: Using the system itself (e.g., creating user profiles) is considered the worst case.
+Tolerance/Plausibility: When expected values cannot always be predicted or computed, a tolerance range must be defined, or plausibility must be checked. Experience is always important.
+Testing is defined as an extremely creative and intellectually challenging task. A core psychological challenge is that developers are human ("Errare humanum est – but who does like to admit?"). Development is constructive, whereas testing can be perceived as destructive.
+Tests can be performed by the developer, colleagues within the same project, persons from other departments, or persons from other companies.
+Testing can/should always be performed tool supported.
+Allocation depends on the product and project.
+It is important to combine independent testers and developers to test properly.
+Failures must be reported to developers and management. Reporting must use a neutral, objective, and constructive reporting style. Undisturbed and open communication is essential.Reproducibility is important. This requires documenting the testing environment and differences relative to the development environment. Mutual appreciation is also necessary.]]></description><link>software-test-&amp;-quality-management/02.-testing-process.html</link><guid isPermaLink="false">Software Test &amp; Quality Management/02. Testing Process.md</guid><pubDate>Mon, 01 Dec 2025 02:46:43 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[01. Introduction]]></title><description><![CDATA[Software frequently fails, often resulting in severe consequences.
 Examples of software failures include: 22 people were wrongly arrested in Australia due to failures in a new NZ $54.5 million courts computer system. A software failure caused 12 hours of delays for UK fliers. Toyota recalled the Newest Priuses over software. Elon Musk's Starlink experienced a global outage due to software failure.
 Expensive Historical Failures: NASA Earth Observation Satellites (1979-1985): The Ozone hole was not detected for 7 years. The reason was a software failure that interpreted the change of the ozone layer as sensor drift, which was then automatically averaged out by zero point correction.
 Ariane 5 (1996): The rocket experienced self-destruction 39 seconds after takeoff on its maiden flight. The failure was caused by reusing the position control software of Ariane 4 without testing, which led to a conversion error.
