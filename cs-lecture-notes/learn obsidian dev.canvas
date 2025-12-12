@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"cdb088e2e5419a79","x":-356,"y":-260,"width":250,"height":50,"type":"text","text":"Plugin"},
+		{"id":"7a84b7185a9440fd","x":-356,"y":-160,"width":250,"height":50,"type":"text","text":"BaseView"},
+		{"id":"ae1319e6529b77b5","x":0,"y":-380,"width":250,"height":60,"type":"text","text":"```ts\nonload()\n```"},
+		{"id":"f7796185348374e6","x":0,"y":-260,"width":250,"height":60,"type":"text","text":"```ts\nonunload()\n```"},
+		{"id":"c61caa272eb5c79d","x":0,"y":-160,"width":250,"height":60,"type":"text","text":"```typescript\nonDataUpdated()\n```"},
+		{"id":"a09473e83ea5bf21","x":360,"y":-260,"width":250,"height":60,"type":"text","text":"```typescript\nthis.containerEl\n```"}
+	],
+	"edges":[
+		{"id":"2825dfc2c38dad35","fromNode":"cdb088e2e5419a79","fromSide":"left","toNode":"7a84b7185a9440fd","toSide":"left","label":"registerBaseView"},
+		{"id":"f03fe0a3413b8c73","fromNode":"cdb088e2e5419a79","fromSide":"right","toNode":"ae1319e6529b77b5","toSide":"left"},
+		{"id":"bf724c188d77e984","fromNode":"cdb088e2e5419a79","fromSide":"right","toNode":"f7796185348374e6","toSide":"left"},
+		{"id":"93a07807c9825798","fromNode":"7a84b7185a9440fd","fromSide":"right","toNode":"c61caa272eb5c79d","toSide":"left"}
+	]
+}
