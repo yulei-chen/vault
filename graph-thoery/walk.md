@@ -1,0 +1,1 @@
+A walk (of length $k$) is a non-empty alternating sequence $v0,e0,v1,e1,···,e_{k−1},v_k$ of [[vertex|vertices]] and [[edge]]s in $G$ such that $e_i = {v_i,v_{i+1}}$ for all $i \lt k$.

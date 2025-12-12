@@ -1,0 +1,1 @@
+If $P$ is an [[arc]] with endpoints $p$ and $q$, then $P$ links them and runs between them. The set $P\backslash\{p,q\}$ is the interior of $P$, denoted by $\mathring{P}$.

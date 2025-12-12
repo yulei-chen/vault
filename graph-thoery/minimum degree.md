@@ -1,0 +1,1 @@
+The minimum degree of $G$ , denoted by $\delta (G)$, is the smallest vertex [[degree]] in $G$.

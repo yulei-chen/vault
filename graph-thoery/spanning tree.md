@@ -1,0 +1,1 @@
+A [[tree]] $T = (V^′,E^′)$ of $G = (V,E)$ is called a [[spanning]] tree of G if $V^′ = V$.
