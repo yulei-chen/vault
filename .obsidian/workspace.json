@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lecture-summaries/Software Test & Quality Management/05. Black-Box Testing.md",
-                "mode": "preview",
+                "file": "index.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05. Black-Box Testing"
+              "title": "index"
             }
           }
         ]
@@ -196,6 +196,8 @@
   },
   "active": "f03e422fbffa8887",
   "lastOpenFiles": [
+    "index.md",
+    "lecture-summaries/Software Test & Quality Management/05. Black-Box Testing.md",
     "lecture-summaries/Model-Driven Software Development/03. Advanced UML.md",
     "lecture-summaries/Model-Driven Software Development/02. Metamodelling.md",
     "lecture-summaries/Model-Driven Software Development/01. Introduction.md",
@@ -209,7 +211,6 @@
     "lecture-summaries/Natural Language Processing/10. Pretrained Text Encoder.md",
     "lecture-summaries/Natural Language Processing/08. Traditiona Sequence Labeling.md",
     "lecture-summaries/Natural Language Processing/07. Sentiment Analysis.md",
-    "lecture-summaries/Software Test & Quality Management/05. Black-Box Testing.md",
     "lecture-summaries/Software Test & Quality Management/04. Static Testing.md",
     "lecture-summaries/Software Test & Quality Management/03. Testing Phrases.md",
     "lecture-summaries/Software Test & Quality Management/02. Testing Process.md",
@@ -222,7 +223,6 @@
     "plane triangulation.md",
     "plane graph.md",
     "planar embedding.md",
-    "planar.md",
     "attachments/Pasted image 20251213015636.png",
     "attachments/Pasted image 20251213015358.png",
     "attachments/Pasted image 20251213015345.png",
