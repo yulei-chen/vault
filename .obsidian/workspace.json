@@ -4,24 +4,95 @@
     "type": "split",
     "children": [
       {
-        "id": "9790a1a1b52467a8",
+        "id": "c5811f7c34e2999f",
         "type": "tabs",
         "children": [
           {
-            "id": "041a5770ec79ca8b",
+            "id": "d20e8f3137a893eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "comparison.md",
+                "file": "decoder-only transformer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "comparison"
+              "title": "decoder-only transformer"
+            }
+          },
+          {
+            "id": "26abcc1ebf4ccf9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 2"
+            }
+          },
+          {
+            "id": "da0debaf0a677ca9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "residual connection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "residual connection"
+            }
+          },
+          {
+            "id": "b3ec47aeb6c54462",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "self-attention.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "self-attention"
+            }
+          },
+          {
+            "id": "7ce4a387c5287f95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 1"
+            }
+          },
+          {
+            "id": "28c0215d36e2d692",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LLMs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LLMs"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -53,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "human feedback",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,7 +251,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 765.5
+    "width": 562.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,48 +265,48 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "54f6822214d50a44",
+  "active": "28c0215d36e2d692",
   "lastOpenFiles": [
-    "comparison.md",
-    "Eat your crust.md",
-    "curl up on the sofa.md",
-    "Luke's English podcast.md",
-    "maximally plane.md",
-    "Andrej Karpathy.md",
-    "inscrutable artifact.md",
-    "evaluation.md",
-    "fine-tuning.md",
-    "inscrutable.md",
-    "parameters.md",
+    "unembedding matrix.md",
     "scaling laws.md",
-    "model inference.md",
+    "parameters.md",
+    "attention.md",
+    "3Blue1Brown.md",
+    "mole.md",
+    "transformer.md",
+    "feedforward neural network.md",
+    "positional encoding.md",
     "LLMs.md",
-    "graph-thoery/closed walk.md",
-    "labeling instructions.md",
-    "neural network.md",
-    "pre-training.md",
-    "model training.md",
-    "base model.md",
-    "multimodality.md",
-    "做对的事情.md",
-    "tool use.md",
+    "self-attention.md",
+    "masked self-attention.md",
+    "attachments/Pasted image 20251215031859.png",
+    "transformer encode-decoder model.md",
+    "attachments/Pasted image 20251215031805.png",
+    "decoder-only transformer.md",
+    "Untitled 2.md",
+    "residual connection.md",
+    "Untitled 1.md",
+    "auto-regressive.md",
+    "StatQuest with Josh Starmer.md",
+    "attachments/Pasted image 20251215030446.png",
+    "attachments/Pasted image 20251215030322.png",
+    "fine-tuning.md",
+    "Andrej Karpathy.md",
+    "Shu Ding.md",
+    "inscrutable artifact.md",
+    "graph-thoery/spanning.md",
+    "biopsy.md",
+    "mind-boggling.md",
+    "attachments/Pasted image 20251215013030.png",
+    "attachments/Pasted image 20251214231407.png",
     "attachments/Pasted image 20251214003525.png",
-    "chilling.md",
-    "Elo rating.md",
-    "lecture-summaries/Natural Language Processing/10. Pretrained Text Encoder.md",
     "dev",
     "language",
     "untitled folder",
     "attachments/Pasted image 20251213015636.png",
     "attachments/Pasted image 20251213015358.png",
     "attachments/Pasted image 20251213015345.png",
-    "attachments/Pasted image 20251212233835.png",
-    "attachments/Pasted image 20251212233313.png",
-    "attachments/Pasted image 20251212233249.png",
     "Untitled.canvas",
-    "attachments/Screenshot 2025-12-10 at 22.46.03.png",
-    "attachments/Pasted image 20251210224057.png",
-    "attachments/Pasted image 20251210222014.png",
     "graph-thoery/attachments",
     "graph-thoery",
     "graph thoery/attachments",

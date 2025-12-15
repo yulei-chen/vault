@@ -1,1 +1,1 @@
-reinforcement learning from human feedback (RHF)
+Reinforcement Learning with Human Feedback ([[RLHF]])
