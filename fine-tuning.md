@@ -1,3 +1,5 @@
+#AI 
+
 swap datasets aimed to specific tasks
 the datasets are [[labeling documentations]]
 it's about [[alignment]]

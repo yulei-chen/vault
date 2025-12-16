@@ -1,0 +1,3 @@
+#graph-theory 
+ 
+The graph $G$ is called $k-regular$ for a natural number $k$ if all vertices have [[degree]] $k$.

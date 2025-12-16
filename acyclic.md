@@ -1,0 +1,2 @@
+#graph-theory 
+A graph $G$ is called acyclic if $G$ does not have any [[cycle]]. Acyclic graphs are also called [[forest]]s.

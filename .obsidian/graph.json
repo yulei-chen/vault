@@ -8,10 +8,31 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#theorem  ",
+      "query": "tag:#theorems  ",
       "color": {
         "a": 1,
-        "rgb": 16768568
+        "rgb": 12427807
+      }
+    },
+    {
+      "query": "tag:#testing  ",
+      "color": {
+        "a": 1,
+        "rgb": 5415904
+      }
+    },
+    {
+      "query": "tag:#graph-theory  ",
+      "color": {
+        "a": 1,
+        "rgb": 11845032
+      }
+    },
+    {
+      "query": "tag:#AI  ",
+      "color": {
+        "a": 1,
+        "rgb": 8771205
       }
     }
   ],
@@ -20,11 +41,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 2.34882405598958,
   "lineSizeMultiplier": 2.00389404296875,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
+  "collapse-forces": false,
+  "centerStrength": 0.546101888020833,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.2181105431462147,
+  "scale": 0.9799550229428872,
   "close": true
 }

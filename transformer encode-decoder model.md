@@ -1,3 +1,7 @@
+#AI 
+
+aka [[seq2seq]]?
+
 
 ![[Pasted image 20251215031805.png]]
 

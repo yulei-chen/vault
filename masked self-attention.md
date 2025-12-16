@@ -1,3 +1,5 @@
+#AI 
+
 masked [[self-attention]], sometimes called an [[auto-regressive]] method.
 
 ![[Pasted image 20251215030322.png]]

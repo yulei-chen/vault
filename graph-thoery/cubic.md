@@ -1,1 +1,0 @@
-Graphs that are 3-[[regular]] are also called cubic regular cubic.

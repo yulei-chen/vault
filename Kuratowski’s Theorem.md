@@ -1,4 +1,4 @@
-#theorem 
+#graph-theory  #theorems 
 
 The following statements are equivalent for graphs $G$:
 

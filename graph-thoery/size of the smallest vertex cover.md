@@ -1,1 +1,0 @@
-We denote the size of the smallest [[vertex cover]] in G by $τ(G)$

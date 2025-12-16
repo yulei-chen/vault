@@ -1,0 +1,3 @@
+#graph-theory 
+
+Given a graph $H$, we call a path $P$ an H-path if P is non-trivial (has H-path length at least one) and meets $H$ exactly in its ends. In particular, the edge of any H-path of length 1 is never an edge of H.

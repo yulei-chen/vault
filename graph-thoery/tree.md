@@ -1,1 +1,0 @@
-A graph $G$ is called a tree if $G$ is [[connected]] and [[acyclic]].

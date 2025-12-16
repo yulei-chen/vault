@@ -1,3 +1,5 @@
+#AI 
+
 it's about knowledge
 
 1. Downloading ~10TB of text

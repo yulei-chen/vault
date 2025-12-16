@@ -1,3 +1,5 @@
+#AI 
+
 Performance of [[LLMs]] is a smooth, well-behaved, predictable function of:
 - N: the number of [[parameters]] in the network
 - D: the amount of text we train on

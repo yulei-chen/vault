@@ -1,0 +1,3 @@
+#graph-theory 
+
+The empty graph $E_n$ on $n$ [[vertex|vertices]] as the (unlabeled) graph isomorphic to $([n],∅)$. Empty graphs correspond to independent sets.

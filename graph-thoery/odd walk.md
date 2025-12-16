@@ -1,1 +1,0 @@
-A [[closed walk]] of odd length

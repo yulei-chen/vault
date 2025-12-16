@@ -1,6 +1,6 @@
+#AI 
 
-
-> Think of [[LLMs]] as mostly inscrutable artifacts, develop correspondingly sophisticated [[evaluation]]s.
+> Think of [[LLMs]] as mostly [[inscrutable]] artifacts, develop correspondingly sophisticated [[evaluation]]s.
 
 \- [[Andrej Karpathy]]: https://youtu.be/zjkBMFhNj_g?si=MVpsS61qGw-jzyvY&t=689
 

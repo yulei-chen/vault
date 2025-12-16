@@ -1,3 +1,5 @@
+#AI 
+
 ![[Pasted image 20251214231407.png]] 
 includes:
 - [[embedding]]

@@ -1,0 +1,3 @@
+#graph-theory 
+
+An $ear$ of H is a non-trivial non-separating path P in H whose internal vertices have degree 2 and whose ends have degree at least 3 each. In particular, if P is an ear of H, then P is an [[H-path|H′-path]] for the graph H′ obtained from H by removing all edges and internal vertices of P. Conversely, if both ends of an H-path P lie in the same connected component of H, then P is an ear of $H+ P$.

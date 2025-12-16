@@ -1,0 +1,3 @@
+#graph-theory 
+
+For any graph $H$ define $q(H)$ to be the number of odd components of $H$, i.e., the number of [[connected]] components of $H$ consisting of an odd number of vertices.

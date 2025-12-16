@@ -1,1 +1,0 @@
-A graph G is called connected if any two [[vertex|vertices]] are linked by a [[path]].

@@ -1,3 +1,0 @@
-$d(G)$
-
-ref: [[degree]]

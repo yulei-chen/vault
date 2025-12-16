@@ -1,1 +1,0 @@
-The $\textbf{size}$ of $G$, denoted by $||G||$, is the number of [[edge]]s, i.e., $||G|| := |E|$. 

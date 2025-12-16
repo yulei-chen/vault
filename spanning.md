@@ -1,0 +1,3 @@
+#graph-theory 
+
+A subgraph $H = (V^′,E^′)$ of $G = (V,E)$ is called a spanning subgraph of G if $V^′ = V$.
