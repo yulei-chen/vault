@@ -4,48 +4,19 @@
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": false,
-  "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "tag:#theorems  ",
-      "color": {
-        "a": 1,
-        "rgb": 12427807
-      }
-    },
-    {
-      "query": "tag:#testing  ",
-      "color": {
-        "a": 1,
-        "rgb": 5415904
-      }
-    },
-    {
-      "query": "tag:#graph-theory  ",
-      "color": {
-        "a": 1,
-        "rgb": 11845032
-      }
-    },
-    {
-      "query": "tag:#AI  ",
-      "color": {
-        "a": 1,
-        "rgb": 8771205
-      }
-    }
-  ],
-  "collapse-display": true,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [],
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 2.34882405598958,
-  "lineSizeMultiplier": 2.00389404296875,
+  "nodeSizeMultiplier": 1.79693603515625,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.546101888020833,
+  "centerStrength": 0.4964599609375,
   "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.9799550229428872,
+  "linkDistance": 30,
+  "scale": 0.30852961489366443,
   "close": true
 }

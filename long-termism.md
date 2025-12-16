@@ -3,6 +3,7 @@ Hi Yulei, 👋
 What would you like to do now?
 
 - code?
+	- codepen - audio player animation
 	- [current project?](https://github.com/yulei-chen?tab=repositories)
 	- [interview preparation](https://bigfrontend.dev/)
 	- [typescript challenge](https://github.com/type-challenges/type-challenges)
@@ -11,6 +12,7 @@ What would you like to do now?
 		- clone [musicForProgramming();](https://musicforprogramming.net/latest/) - podcast
 		- clone [Jimmy Lai](https://jimmyl.ai/) - Lucie's page
 - read?
+	- https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 	- [feed](https://www.inoreader.com/all_articles)
 - learn English?
 	- [feed](https://www.inoreader.com/all_articles)

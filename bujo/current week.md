@@ -6,6 +6,6 @@ todo:
 - wrok: none
   
 daily check-in:
-- English one sentence: x 
+- English one sentence: x x
 ```
 
