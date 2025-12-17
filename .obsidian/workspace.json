@@ -27,16 +27,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Menger's Theorem for edge-connectivity.md",
+                "file": "verification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Menger's Theorem for edge-connectivity"
+              "title": "verification"
+            }
+          },
+          {
+            "id": "5f405600cf9412f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "podcast topics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "podcast topics"
+            }
+          },
+          {
+            "id": "792c5a9973b62e20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "podcast topics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "podcast topics"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,6 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "podcast topics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +159,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for podcast topics"
             }
           },
           {
@@ -209,8 +238,12 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "4569928cb905bf6e",
+  "active": "792c5a9973b62e20",
   "lastOpenFiles": [
+    "learn everything with obsidian.md",
+    "podcast topics.md",
+    "verification.md",
+    "v-model.md",
     "Menger's Theorem for edge-connectivity.md",
     "bipartite.md",
     "neighborhood.md",
@@ -234,10 +267,6 @@
     "fault masking.md",
     "**Min/Max Number Constraint.md",
     "**Min",
-    "white-box testing.md",
-    "unit testing.md",
-    "white-box test.md",
-    "lecture-summaries/Software Test & Quality Management/05. Black-Box Testing.md",
     "Untitled.base",
     "learn obsidian dev.canvas",
     "Untitled 1",
