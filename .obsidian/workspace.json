@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "1360c8de6e9b119b",
+        "id": "7b78dfd75895bd03",
         "type": "tabs",
         "children": [
           {
-            "id": "f175694a87d97958",
+            "id": "fb924999f6fd29b4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "烦恼.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "烦恼"
-            }
-          },
-          {
-            "id": "fc47e2e83a7ef47a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "平等.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "平等"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,58 +188,61 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "webpage-html-export:Export as HTML": false
+      "webpage-html-export:Export as HTML": false,
+      "markwhen:Create new Markwhen file": false,
+      "yearly-glance:Open yearly glance": false,
+      "periodic-notes:Open this week": false
     }
   },
-  "active": "fc47e2e83a7ef47a",
+  "active": "fb924999f6fd29b4",
   "lastOpenFiles": [
-    "Untitled.md",
-    "平等.md",
-    "追求优越性.md",
-    "自卑感.md",
-    "夸耀不幸.md",
-    "优越情结.md",
-    "不幸.md",
-    "烦恼.md",
-    "外部因果律.md",
-    "自卑情结.md",
-    "目的论.md",
-    "原因论.md",
-    "内部烦恼.md",
-    "鼓励.md",
-    "虚无主义.md",
-    "重要的不是被给予了什么.md",
-    "勇气.md",
-    "个体心理学.md",
-    "阿德勒心理学.md",
-    "阿德勒.md",
-    "都是你自己选择的（待理解）.md",
-    "心理创伤学说.md",
-    "Untitled 2.md",
-    "Untitled 3.md",
-    "Untitled 1.md",
-    "做对的事情.md",
-    "attachments/Pasted image 20251229215007.png",
-    "attachments/Pasted image 20251229214830.png",
-    "attachments/Pasted image 20251229213604.png",
-    "attachments/Pasted image 20251229213240.png",
-    "attachments/Pasted image 20251229213055.png",
-    "attachments/Pasted image 20251229210253.png",
-    "attachments/Pasted image 20251229210002.png",
-    "attachments/Pasted image 20251229205050.png",
-    "attachments/Pasted image 20251229204623.png",
-    "attachments/Pasted image 20251227225701.png",
+    "podcast topics.md",
+    "learn everything with obsidian.md",
+    "podcast ep4 One-month travel in Europe with Lucie.md",
+    "weeks/2026-W01.md",
+    "podcast ep3 40 questions i ask myself for summarizing this year.md",
+    "content - learn everything with zoom-in and out.md",
+    "lifecycle incl. modeled implementation.md",
+    "architecture view points of palladio.md",
+    "repository view type.md",
+    "attachments/Pasted image 20260102185945.png",
+    "attachments/Pasted image 20260102185912.png",
+    "attachments/Pasted image 20260102185846.png",
+    "repository.md",
+    "second-class entity.md",
+    "Untitled.base",
+    "first-class entity.md",
+    "Assembly Connector.md",
+    "attachments/Pasted image 20260102185605.png",
+    "assembly view type.md",
+    "Assembly Context.md",
+    "attachments/Pasted image 20260102185504.png",
+    "attachments/Pasted image 20260102185426.png",
+    "attachments/Pasted image 20260102185407.png",
+    "component (software).md",
+    "component.md",
+    "Component Type.md",
+    "attachments/Pasted image 20260102185045.png",
+    "attachments/Pasted image 20260102185026.png",
+    "attachments/Pasted image 20260102184651.png",
+    "interface.md",
+    "inner-component.md",
+    "overview of software architecture and quality.md",
+    "architecture view points.md",
+    "view type.md",
+    "view point.md",
+    "view points in UML 2.md",
+    "palladio component model (PCM).md",
+    "long-termism",
+    "Markwhen/Markwhen 1-1-2026 21.52.19.mw",
+    "Markwhen/Markwhen 1-1-2026 21.53.07.mw",
+    "Markwhen/Markwhen 1-1-2026 21.53.06.mw",
+    "Markwhen",
     "modified condition/decision coverage (MC",
     "modified condition",
     "**Min",
-    "Untitled.base",
     "learn obsidian dev.canvas",
     "Untitled 1",
-    "bujo/Untitled",
-    "bujo",
-    "dev",
-    "language",
-    "untitled folder",
     "Untitled.canvas"
   ]
 }

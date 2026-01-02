@@ -13,6 +13,7 @@ What would you like to do now?
 		- clone [musicForProgramming();](https://musicforprogramming.net/latest/) - podcast
 		- clone [Jimmy Lai](https://jimmyl.ai/) - Lucie's page
 - read?
+	- bluesky bookmark
 	- https://pudding.cool/2018/02/waveforms/
 	- https://chrome.dev/css-wrapped-2025/
 	- https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
