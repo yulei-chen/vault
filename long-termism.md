@@ -8,9 +8,9 @@ What would you like to do now?
 	- [current project?](https://github.com/yulei-chen?tab=repositories)
 	- [interview preparation](https://bigfrontend.dev/)
 	- [typescript challenge](https://github.com/type-challenges/type-challenges)
-	- [codepen weekly challenge](https://codepen.io/)
+	- [codepen weekly challenge](https://codepen.io/challenges)
 	- new ideas
-		- clone [musicForProgramming();](https://musicforprogramming.net/latest/) - podcast
+		 - [x] clone [musicForProgramming();](https://musicforprogramming.net/latest/) - podcast
 		- clone [Jimmy Lai](https://jimmyl.ai/) - Lucie's page
 - read?
 	- bluesky bookmark
@@ -24,6 +24,7 @@ What would you like to do now?
 	- nuxt
 	- drrizle
 	- docker
+	- tech-writing
 - plan next travel?
 	- once every two months. 10-day holiday every year.
 	- [x] 2025 Dec 19 ~ 21 dark forest
@@ -37,7 +38,7 @@ What would you like to do now?
 	- [[tech video ideas]]
 	- Europe travel vlog
 - podcast?
-	- [[podcast topics]]
+	- [[podcast episodes]]
 - writing?
 	- [[things i'm using]]
 

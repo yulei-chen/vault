@@ -15,8 +15,9 @@
   },
   "monthly": {
     "format": "",
-    "template": "",
-    "folder": ""
+    "template": "months/template.md",
+    "folder": "months",
+    "enabled": false
   },
   "quarterly": {
     "format": "",

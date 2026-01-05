@@ -8,45 +8,31 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#readlater  ",
-      "color": {
-        "a": 1,
-        "rgb": 16752286
-      }
-    },
-    {
       "query": "tag:#AI  ",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 16748431
       }
     },
     {
       "query": "tag:#graph-theory  ",
       "color": {
         "a": 1,
-        "rgb": 5404128
-      }
-    },
-    {
-      "query": "tag:#English  ",
-      "color": {
-        "a": 1,
-        "rgb": 16777215
+        "rgb": 16773579
       }
     },
     {
       "query": "tag:#testing  ",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 12772090
       }
     },
     {
       "query": "tag:#se  ",
       "color": {
         "a": 1,
-        "rgb": 14701207
+        "rgb": 11920033
       }
     }
   ],
@@ -60,6 +46,6 @@
   "repelStrength": 9.36848958333333,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 1.6005658457126144,
+  "scale": 1.2720040629223224,
   "close": true
 }
